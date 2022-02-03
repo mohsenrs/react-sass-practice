@@ -1,3 +1,5 @@
+@use './variables' as *;
+
 @mixin textStyle($size, $weight, $color) {
   font-size: $size;
   font-weight: $weight;
@@ -5,9 +7,24 @@
 }
 
 @mixin query($width) {
-  @if ($width == 560) {
-    @media screen and (max-width: 560px) {
+  @if ($width == 760) {
+    @media screen and (max-width: 760px) {
       @content;
     }
   }
+}
+
+@mixin bodyStyle {
+  background-color: $secondaryColor;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  padding: 2rem 0;
+}
+
+@mixin boxStyle {
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
 }

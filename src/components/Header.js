@@ -19,7 +19,7 @@ function Header() {
   }, [])
 
   useEffect(() => {
-    if (width > 560 && menuOpen) {
+    if (width > 760 && menuOpen) {
       setMenuOpen(false)
     }
   }, [width, menuOpen])

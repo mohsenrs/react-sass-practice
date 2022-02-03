@@ -1,0 +1,58 @@
+@use '../style/variables' as *;
+@use '../style/mixins' as *;
+
+.main {
+  margin: $section__margin;
+  display: flex;
+  align-items: center;
+
+  aside {
+    flex: 1;
+    @include bodyStyle;
+    @include boxStyle;
+
+    div {
+      background-color: $primaryColor;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 1rem 0;
+      width: 90%;
+      height: 100px;
+      border-radius: 15px;
+
+      p {
+        @include textStyle(1.2rem, bold, $secondaryColor);
+      }
+    }
+  }
+
+  main {
+    flex: 3;
+    margin-left: 2rem;
+    @include bodyStyle;
+    @include boxStyle;
+
+    img {
+      width: 400px;
+    }
+  }
+}
+
+@include query(760) {
+  .main {
+    flex-direction: column-reverse;
+
+    aside {
+      flex: 1;
+      width: 100%;
+    }
+
+    main {
+      flex: 1;
+      width: 100%;
+      margin: 0 0 2rem 0;
+    }
+  }
+}
