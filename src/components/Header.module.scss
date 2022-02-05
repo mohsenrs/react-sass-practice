@@ -76,7 +76,7 @@
   }
 }
 
-@include query(760) {
+@include query(tablet) {
   .hamburger__menu {
     display: flex;
   }

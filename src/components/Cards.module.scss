@@ -1,0 +1,16 @@
+@use '../style/variables' as *;
+@use '../style/mixins' as *;
+
+.cards {
+  margin: $section__margin;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 30px;
+
+  @include query(tablet) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include query(mobile) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

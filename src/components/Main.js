@@ -20,7 +20,9 @@ function Main() {
         </div>
       </aside>
       <main>
-        <img src={image} alt='image' />
+        <div>
+          <img src={image} alt='frontend developer' />
+        </div>
         <h2>Mohsen</h2>
         <p>This is my CV</p>
       </main>

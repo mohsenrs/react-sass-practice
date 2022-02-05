@@ -7,8 +7,12 @@
 }
 
 @mixin query($width) {
-  @if ($width == 760) {
-    @media screen and (max-width: 760px) {
+  @if ($width == tablet) {
+    @media screen and (max-width: 770px) {
+      @content;
+    }
+  } @else if($width == mobile) {
+    @media screen and (max-width: 430px) {
       @content;
     }
   }
